@@ -1,0 +1,49 @@
+﻿<Window x:Class="IriTech_Installer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IriTech_Installer"
+        mc:Ignorable="d"
+        Title="Iritech" Height="480" Width="960" MinHeight="480" MinWidth="640">
+
+    <Grid Background="#009688">
+
+        <Button Style="{StaticResource EmptyButtonStyle}" 
+            Click="OnLogoClick"
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Top">
+            <Image 
+            Height="50" 
+            Width="240" 
+            Source="/resources/images/logo.png"/>
+        </Button>
+
+        <ToolBarPanel Height="290" Width="260" Background="White" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Center">
+
+            <Button Name="InstallButton" Style="{StaticResource ButtonStyle}" Click="OnInstallClick"
+                Content="Install Application" />
+
+            <Button Name="InitButton" Style="{StaticResource ButtonStyle}" Click="OnInitClick"
+                Content="Init Scanner" />
+
+            <Button Name="CaptureButton" Style="{StaticResource ButtonStyle}" Click="OnCaptureClick"
+                Content="Capture Retina" />
+
+            <Button Name="UnInstallButton" Style="{StaticResource ButtonStyle}" Click="OnUnInstallClick"
+                Content="Uninstall Application" />
+
+        </ToolBarPanel>
+
+        <WrapPanel Margin="10,80,10,10" Width="320" Height="360" Background="White" HorizontalAlignment="Right" VerticalAlignment="Center">
+
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+
+                <TextBlock Name="InfoBox" Padding="16" Width="320" Text="Iritech" TextWrapping="Wrap" />
+
+            </ScrollViewer>
+
+        </WrapPanel>
+
+    </Grid>
+</Window>
